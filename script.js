@@ -6,10 +6,10 @@ playGame();
 function getComputerChoice() {
     let random = Math.random();
 
-    if (random <= (1/3)) {
+    if (random < (1/3)) {
         return "rock";
     }
-    else if(random <= (2/3)) {
+    else if(random < (2/3)) {
         return "paper";
     }
     else {
@@ -89,7 +89,7 @@ function playGame() {
         }
         console.log(`Current Score - You: ${humanScore}, Computer: ${computerScore}`);
             
-        if (humanScore >= 5 || computerScore >= 5) {
+        if (humanScore == 5 || computerScore == 5) {
             if (humanScore > computerScore) {
                 console.log("Congratulations, You won the game!");
             }
